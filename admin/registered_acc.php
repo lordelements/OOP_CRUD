@@ -1,8 +1,11 @@
 <?php
-  require_once 'includes/header.php';
+  require_once '../private/functions.php';
   $pageTitle = "ADMIN PANEL";
+  session_start();
 ?>
 
+
+<?php require_once 'includes/header.php'; ?>
 <!-- partial -->
 <div class="main-panel">
   <div class="content-wrapper">
