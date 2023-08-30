@@ -1,3 +1,11 @@
+<?php
+
+  if (!isset($_SESSION['username'])) {
+    // header("Location: ../public/login.php");
+    redirect(' ../public/login.php','Sorry your not authorize to access staff dashboard!');
+  }
+  
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>

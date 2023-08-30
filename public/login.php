@@ -1,10 +1,15 @@
 <?php 
      require_once '../private/functions.php';
-    //  session_start();
+     session_start();
+     error_reporting(0);
      if (isset($_POST['submit'])) {
-      $insT = $loguser->loginUser();
+      $loguser = new class_login();
+      $isLogin = $loguser->loginUser();
   }
 
+if (isset($_SESSION['username'])) {
+    header("Location: ../admin/index.php");
+}
 ?>
 
 <!DOCTYPE html>
@@ -35,19 +40,19 @@
                 </div>
                 <h6 class="font-weight-light">Sign in to continue.</h6>
                 
-                <!-- alert message here -->
-                <?= $_SESSION['alert_msg']; ?>
+                 <!-- alert message -->
+                 <?= alertMessage(); ?>
 
                 <form class="pt-3" method="post">
                   <div class="form-group">
                     <label for="InputUsername1" class=" font-weight-medium">Username</label>
                     <input type="text" name="username" class="form-control form-control-lg"
-                     id="InputUsername1" placeholder="Your Username here" autocomplete="off">
+                     id="InputUsername1" placeholder="Your Username here" autocomplete="off" required>
                   </div>
                   <div class="form-group">
                     <label for="InputPassword1" class=" font-weight-medium">Password</label>
                     <input type="password" name="password" class="form-control form-control-lg"
-                     id="InputPassword1" placeholder="Your password here" autocomplete="off">
+                     id="InputPassword1" placeholder="Your password here" autocomplete="off" required>
                   </div>
                   <div class="mt-3">
                     <input type="submit" name="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" value="SIGN IN">

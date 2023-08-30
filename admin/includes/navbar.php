@@ -56,7 +56,7 @@
                   </a>
                   <div role="separator" class="dropdown-divider"></div>
                   <h5 class="dropdown-header text-uppercase  ps-2 text-dark mt-2">Actions</h5>
-                  <a class="dropdown-item py-1 d-flex align-items-center justify-content-between" href="../public/login.php">
+                  <a class="dropdown-item py-1 d-flex align-items-center justify-content-between" href="../class/logout.php">
                     <span>Log Out</span>
                     <i class="mdi mdi-logout ms-1"></i>
                   </a>
@@ -210,12 +210,18 @@
               </div>
             </li>
 
-            <li class="nav-item sidebar-user-actions">
-              <div class="sidebar-user-menu">
-                <a href="#" class="nav-link"><i class="mdi mdi-settings menu-icon"></i>
-                  <span class="menu-title">Settings</span>
-                </a>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+                <span class="icon-bg"><i class="mdi mdi-settings menu-icon"></i></span>
+                <span class="menu-title">Settings</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="auth">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="./registered_acc.php"> Users Account </a></li>
+                </ul>
               </div>
             </li>
+
           </ul>
         </nav>

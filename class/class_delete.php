@@ -10,4 +10,4 @@ class class_delete extends config {
         return $result;
       }
 }
-// $del = new class_delete();
+$del = new class_delete();

@@ -1,10 +1,10 @@
 <?php 
      require_once '../private/functions.php';
-     
+     session_start();
     if (isset($_POST['submit'])) {
       $data = new class_register();
       $insT = $data->registerData();
-      var_dump($insT);
+      // var_dump($insT);
     }
 
 ?>

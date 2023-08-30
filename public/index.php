@@ -1,7 +1,14 @@
-<?php 
-     require_once 'includes/header.php';
+<?php
      $pageTitle = "Home";
+     require_once '../private/functions.php';
+     session_start();
+      
+  // if (!isset($_SESSION['username'])) {
+  //   header("Location: ../public/login.php");
+  // }
 ?>
+
+<?php require_once 'includes/header.php'; ?>
 
  <!-- partial -->
  <div class="main-panel">
@@ -29,6 +36,10 @@
               </div>
             </div>
             <div class="row">
+              
+                 <!-- alert message -->
+                 <?= alertMessage(); ?>
+
               <div class="col-md-12">
                 <div class="d-sm-flex justify-content-between align-items-center transaparent-tab-border {">
                   <ul class="nav nav-tabs tab-transparent" role="tablist">

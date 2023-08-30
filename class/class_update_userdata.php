@@ -1,5 +1,4 @@
 <?php
-// session_start();
 
 class class_update_userdata extends config {
         
@@ -28,13 +27,13 @@ class class_update_userdata extends config {
                 <strong>Hey!</strong> Record is updated successfully
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>';
-                // header("location:..admin/index.php");
+                // header("Location: ../admin/update.php");
             }else{
                 $_SESSION["alert_msg"] = '<div class="alert alert-danger alert-dismissible fade show col-md-12 mb-3" role="alert">
                 <strong>Hey!</strong> Woops! Failed to update.!
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>';
-                // header("location:admin/index.php");
+                // header("Location:../admin/update.php");
             }
         }
         

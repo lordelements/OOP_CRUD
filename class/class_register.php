@@ -1,5 +1,5 @@
 <?php 
-
+ 
    class class_register extends config {
 
         public function registerData() {

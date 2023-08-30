@@ -56,7 +56,7 @@
                   </a>
                   <div role="separator" class="dropdown-divider"></div>
                   <h5 class="dropdown-header text-uppercase  ps-2 text-dark mt-2">Actions</h5>
-                  <a class="dropdown-item py-1 d-flex align-items-center justify-content-between" href="login.php">
+                  <a class="dropdown-item py-1 d-flex align-items-center justify-content-between" href="../class/logout.php">
                     <span>Log Out</span>
                     <i class="mdi mdi-logout ms-1"></i>
                   </a>
